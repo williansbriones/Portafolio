@@ -1,0 +1,39 @@
+version: '3.9'
+
+services:
+  php-services:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - 8082:80
+    networks:
+      mired:
+        ipv4_address: 173.18.0.3
+    volumes:
+      - ./app:/var/www/html
+  db:
+    image: mariadb
+    environment:
+      MARIADB_ROOT_PASSWORD: ${PWD}
+      MARIADB_DATABASE: ${audio_service}
+      MARIADB_USER: ${user}
+      MARIADB_PASSWORD: ${password}
+    volumes:
+      - datadir:/var/lib/mysql
+    networks:
+      mired:
+        ipv4_address: 173.18.0.2
+    ports:
+      - 3307:3306
+    
+volumes:
+  datadir:
+
+networks:
+  mired:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: "173.18.0.0/16"
+          gateway: "173.18.0.1"

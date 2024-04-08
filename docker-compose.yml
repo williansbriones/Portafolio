@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  php-services:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - 8081:80

@@ -1,0 +1,115 @@
+/* boton github*/
+.Btn {
+    margin-top: 5px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    position: relative;
+    /* overflow: hidden; */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .3s;
+    z-index: 2;
+    border: 1px solid rgba(156, 156, 156, 0.466);
+
+}
+
+.background-social-media{
+    width: 43px;
+    height: 43px;
+    border-radius: 10px;
+    backdrop-filter: blur(0px);
+    background-color: transparent;
+    padding-top: 7px;
+    z-index: 2;
+}
+
+.svgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    letter-spacing: 1px;
+    border-radius: 10px;
+    transition: all .3s;
+    z-index: 2;
+    border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+#BG-github {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #181818;
+    z-index: 1;
+    border-radius: 10px;
+    pointer-events: none;
+    transition: all .3s;
+}
+
+.Btn:hover #BG-github {
+    transform: rotate(35deg);
+    transform-origin: bottom;
+}
+
+.Btn:hover .background-social-media {
+    background-color: rgba(19, 19, 19, 0.46);
+    backdrop-filter: blur(4px);
+}
+/*BG-linkedin*/
+
+#BG-linkedin {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #0077b5;
+    z-index: 1;
+    border-radius: 10px;
+    pointer-events: none;
+    transition: all .3s;
+}
+
+.Btn:hover #BG-linkedin {
+    transform: rotate(35deg);
+    transform-origin: bottom;
+}
+/*BG-whatsapp*/
+#BG-whatsapp {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #075e54;
+    z-index: 1;
+    border-radius: 10px;
+    pointer-events: none;
+    transition: all .3s;
+}
+
+.Btn:hover #BG-whatsapp {
+    transform: rotate(35deg);
+    transform-origin: bottom;
+}
+/* fonts */
+
+.barlow-condensed-semibold {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+/* magin top de lado izquierdo y derecho*/
+.ref-me{
+    margin-top: 15px;
+}
+
+
+/* elemento para testear los bordes de los elementos*/
+.bordes{
+    border: #DFD2FB 1mm solid;
+}
