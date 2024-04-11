@@ -1,4 +1,7 @@
 /* boton github*/
+.background-head{
+    background-color: #3A4551;
+}
 .Btn {
     margin-top: 5px;
     width: 45px;
@@ -13,14 +16,14 @@
     cursor: pointer;
     transition: all .3s;
     z-index: 2;
-    border: 1px solid rgba(156, 156, 156, 0.466);
+    border: 2px solid rgba(223, 210, 251, 0.466);
 
 }
 
 .background-social-media{
     width: 43px;
     height: 43px;
-    border-radius: 10px;
+    border-radius: 9px;
     backdrop-filter: blur(0px);
     background-color: transparent;
     padding-top: 7px;
@@ -28,16 +31,17 @@
 }
 
 .svgContainer {
+    fill: black;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: transparent;
     backdrop-filter: blur(0px);
     letter-spacing: 1px;
-    border-radius: 10px;
+    border-radius: 11px;
     transition: all .3s;
     z-index: 2;
-    border: 1px solid rgba(156, 156, 156, 0.466);
+    border: 2px solid rgba(223, 210, 251, 0.46);
 }
 
 #BG-github {
@@ -45,19 +49,21 @@
     content: "";
     width: 100%;
     height: 100%;
-    background: #181818;
+    background: #9DAAB6;
     z-index: 1;
-    border-radius: 10px;
+    border-radius: 6px;
     pointer-events: none;
     transition: all .3s;
 }
 
 .Btn:hover #BG-github {
+    background: #181818;
     transform: rotate(35deg);
     transform-origin: bottom;
 }
 
 .Btn:hover .background-social-media {
+    fill: white;
     background-color: rgba(19, 19, 19, 0.46);
     backdrop-filter: blur(4px);
 }
@@ -68,14 +74,15 @@
     content: "";
     width: 100%;
     height: 100%;
-    background: #0077b5;
+    background: #9DAAB6;
     z-index: 1;
-    border-radius: 10px;
+    border-radius: 6px;
     pointer-events: none;
     transition: all .3s;
 }
 
 .Btn:hover #BG-linkedin {
+    background: #0077b5;
     transform: rotate(35deg);
     transform-origin: bottom;
 }
@@ -85,14 +92,15 @@
     content: "";
     width: 100%;
     height: 100%;
-    background: #075e54;
+    background: #9DAAB6;
     z-index: 1;
-    border-radius: 10px;
+    border-radius: 6px;
     pointer-events: none;
     transition: all .3s;
 }
 
 .Btn:hover #BG-whatsapp {
+    background: rgba(37, 211, 102, 0.87);
     transform: rotate(35deg);
     transform-origin: bottom;
 }
@@ -107,9 +115,22 @@
 .ref-me{
     margin-top: 15px;
 }
-
+.display-inline{
+    display: inline;
+}
 
 /* elemento para testear los bordes de los elementos*/
 .bordes{
     border: #DFD2FB 1mm solid;
+}
+
+/*elementos responisve*/
+@media (max-width: 838px) {
+    .responsive{
+        display: none;
+    }
+    .title{
+        width: 100%;
+        height: auto;
+    }
 }
